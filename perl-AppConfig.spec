@@ -1,6 +1,6 @@
 %define module AppConfig
 %define name	perl-%{module}
-%define	version	1.65
+%define	version	1.66
 %define release %mkrel 1
 
 Name:		%{name}
@@ -46,4 +46,3 @@ arguments.
 %{perl_vendorlib}/AppConfig
 %{perl_vendorlib}/AppConfig.pm
 %{_mandir}/*/*
-

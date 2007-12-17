@@ -16,7 +16,6 @@ Buildrequires:  perl-devel
 %endif
 BuildRequires:	perl-File-HomeDir
 buildarch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 AppConfig has a powerful but easy to use module for parsing configuration

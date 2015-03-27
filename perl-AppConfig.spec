@@ -1,14 +1,14 @@
 %define upstream_name    AppConfig
-%define	upstream_version 1.66
+%define upstream_version 1.71
 
 Summary:	Perl5 modules for reading configuration
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	14
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/AppConfig/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl-File-HomeDir
@@ -22,7 +22,7 @@ arguments.
 %setup -qn %{upstream_name}-%{upstream_version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -36,4 +36,3 @@ make test
 %{perl_vendorlib}/AppConfig
 %{perl_vendorlib}/AppConfig.pm
 %{_mandir}/man3/*
-

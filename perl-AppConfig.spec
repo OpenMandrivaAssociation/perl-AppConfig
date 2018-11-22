@@ -4,10 +4,10 @@
 Summary:	Perl5 modules for reading configuration
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		http://metacpan.org/pod/AppConfig
 Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/AppConfig-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)

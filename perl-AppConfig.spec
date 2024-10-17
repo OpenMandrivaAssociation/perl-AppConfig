@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	5
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/AppConfig
+Url:		https://metacpan.org/pod/AppConfig
 Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/AppConfig-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)

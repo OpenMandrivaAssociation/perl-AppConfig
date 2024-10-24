@@ -1,14 +1,13 @@
 %define upstream_name    AppConfig
-%define	upstream_version 1.71
 
 Summary:	Perl5 modules for reading configuration
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	1.71
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/AppConfig
-Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/AppConfig-%{upstream_version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/AppConfig-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
@@ -20,21 +19,20 @@ files. It also has a simple and efficient module for parsing command line
 arguments.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README
 %{perl_vendorlib}/AppConfig
 %{perl_vendorlib}/AppConfig.pm
 %{_mandir}/man3/*
-

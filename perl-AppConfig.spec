@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/AppConfig
 Source0:	http://search.cpan.org/CPAN/authors/id/N/NE/NEILB/AppConfig-%{version}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 BuildRequires:	perl-File-HomeDir
